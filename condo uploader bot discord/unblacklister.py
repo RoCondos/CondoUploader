@@ -11,29 +11,20 @@ except Exception as e:
     exit(1)
 
 def update_unique_id():
-    """
-    Function to update UniqueId in the XML document.
-    """
-    print('Updating UniqueId...')
+    print('UNBLACKLISTER > Updating UniqueId...')
     for element in doc.xpath("//UniqueId[@name='UniqueId']"):
         element.text = f'ILlmaijji{secrets.token_hex(110)}'
     doc.write(file_name)
 
 def update_referent():
-    """
-    Function to update referent attribute in the XML document.
-    """
-    print('Updating Referent...')
+    print('UNBLACKLISTER > Updating Referent...')
     for element in doc.xpath("//Item[@referent]"):
         random_string = ''.join(random.choice('oijj') for _ in range(70))
         element.attrib['referent'] = f'Strijg{random_string}'
     doc.write(file_name)
 
 def update_asset_id():
-    """
-    Function to update SourceAssetId in the XML document.
-    """
-    print('Updating AssetId...')
+    print('UNBLACKLISTER > Updating AssetId...')
     for element in doc.xpath("//SourceAssetId[@name='SourceAssetId']"):
         element.text = f'-{secrets.token_hex(20)}'
     doc.write(file_name)
