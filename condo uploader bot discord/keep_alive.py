@@ -1,15 +1,15 @@
 from flask import Flask
 from threading import Thread
 
-app = Flask('')
+app = Flask('condo-alive')
 
 @app.route('/')
 def main():
-  return "Your bot is alive!"
+    return "I am running"
 
 def run():
-  app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8080)
 
 def keep_alive():
-  server = Thread(target=run)
-  server.start()
+    server = Thread(target=run)
+    server.start()
