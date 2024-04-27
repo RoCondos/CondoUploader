@@ -1,2 +1,5 @@
-# roblox-condo-discord-bot
-Created by me and Bannable. Decided to leak to this outdated bullshit.  Roblox condos are fucking dead in 2022 
+# CondoUploader
+Created by hqnt and Bannable
+Maintained by me
+-----------------------
+This bot is designed to auto-upload the condos
